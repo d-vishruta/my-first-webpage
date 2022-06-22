@@ -1,0 +1,138 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<link rel='shortcut icon' href="logo.png">
+		<title>fiducia</title>
+		<style>
+			body
+			{
+				background-image:url("backimg.jpg");
+				background-size:cover;
+			}
+			.container
+			{
+				position: relative;
+				display:flex;
+				flex-direction:row;
+				visibility:visible;
+				overflow:hidden;
+				height:500px;
+				width:900px;
+				background-color:#FEFDFD;
+				left:18%;
+				margin-top:6%;
+				opacity:0.93;
+			}
+			.container2
+			{
+				padding-left:7%;
+				height:500px;	
+			}
+			.container3
+			{
+				visibility:hidden;	
+			}
+			.imag
+			{
+				padding-top:15px;
+				padding-left:95px;
+				height:130px;
+			}
+			.title
+			{
+				font-size:25px;
+				padding-left:195px;
+				font-family:"Trebuchet MS", Helvetica, sans-serif;
+			}
+			p
+			{
+				padding-left:27px;
+				font-family:"Trebuchet MS", Helvetica, sans-serif;
+			}		
+			input
+			{
+				position:relative;
+				margin-left:53px;
+				border-radius:60px;
+				width:360px;
+				height:50px;
+				background-color:#A4A4A4;
+				font-size:20px;
+				margin-top:7px;
+				padding-left:13px;
+				border-style:none;
+			}
+			.bl
+			{
+				background-color:#C86351;
+				margin-left:136px;
+				width:200px;
+				font-size:20px;
+				text-allign:center;
+				padding:10px 10px 10px 10px;
+				border-radius:17px;
+				margin-top:30px;
+				color:#0A1252;
+				opacity:1;
+				border-style:none;
+			}
+			.BS
+			{
+				position:absolute;
+				background-color:white;
+				margin-left:130px;
+				width:100px;
+				cursor:pointer;
+				font-size:20px;
+				padding:10px 10px 10px 10px;
+				color:#0A1252;
+				opacity:1;
+				border-style:none none solid;
+				border-color:black;
+			}
+			.simg
+			{
+				position:absolute;
+				padding-left:10.8%;
+				height:499px;
+			}
+		</style>
+		<script>
+			function slide()
+			{	
+				document.getElementById("image").style.order="-1";
+				document.getElementById("image").style.paddingLeft="0%";	
+				document.getElementById("signup").style.order="-1";
+				document.getElementById("signin").style.visibility="hidden";
+				document.getElementById("signup").style.visibility="visible";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<div class="container1" id="signin">
+				<img src="logo copy.png" alt="logo" class="imag">
+				<label class="title"><br><b>Sign In</b><br><br></label>
+				<form>
+					<input type="text" placeholder="Username"><br>
+					<input type="password" placeholder="Password"><br>
+					<button class="bl"><b>Login</b></button><br><br>
+					<p><b>Don't have an account?</b>
+					<button onClick="slide()" class="BS">Sign Up</button></p>
+				</form>
+			</div>
+			<div class="container2" id="image">
+				<img src="signuppag.png" alt="Sign up">
+			</div>
+			<div class="container3" id="signup">
+				<form>
+					<p>Sign up<br></p>
+					<input type="email" placeholder="Email ID">
+					<input type="text" placeholder="Username">
+					<input type="tel" placeholder="Phone number">
+					<input type="pass" placeholder="Password">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
